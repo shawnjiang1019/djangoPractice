@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Media</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <a href="{%url 'logout'%}" style="position:fixed;right:3%;top:3%;">Logout</a>
+    <a href=""></a>
+    {% endif %}
+{% if messages %}
+{% for message in messages %}
+
+
+
+<div>{{message}}</div>
+{% endfor %}
+{% endif %}
+{% block content %}{% endblock %}
+</body>
+</html>
